@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+span{
+    font-size: 15px;
+    text-align: left;
+    padding-left: 480px;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+
+.header{
+    height: 80px;
+    width: 90%;
+    background-color:#009688;
+    border-radius: 3px;
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    
+}
+
+.header .logo{
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.cart{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 3px;
+    width: 80px;
+}
+
+.fa-solid{
+    color: #009688;
+}
+
+.cart p{
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background-color:#009688;
+    color: white;
+}
+
+.container{
+    display: flex;
+    width: 85%;
+    margin-bottom: 30px;
+}
+
+#root{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.sidebar{
+    width: 40%;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.head{
+    background-color: #009688;
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+} 
+
+.foot{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #333;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #009688;
+    border-radius: 5px;
+    padding: 15px;
+}
+.img-box{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images{
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    object-position: center;
+}
+.bottom{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+}
+h2{
+    font-size: 20px;
+    color: red;
+}
+
+
+button{
+    width: 100%;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: #009688;
+    padding: 7px 25px;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover{
+    background-color: #333;
+}
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #aaa;
+    border-radius: 3px;
+    margin: 10px 10px;
+}
+.row-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.rowimg{
+    max-width: 57px;
+    max-height: 50px;
+    border-radius: 50%;
+}
+.fa-trash:hover{
+    cursor: pointer;
+    color: #333;
+}
+
+.checkout-btn{
+    width: 100%;
+    background: orange;
+    padding: .4rem;
+    font-size: 1.5rem;
+    color: var(--main-white);
+    font-weight: 700;
+    text-align: center;
+    border-radius: .4rem;
+    border: none;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: all .3s;
+    display: block;
+}
+
+.checkout-btn:hover{
+    background: var(--orange);
+}
+
+/*--------------------------Payment popup form----------------------*/
+
+#pmtForm{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contentwrapper{
+     display: grid;
+     grid-template-columns: 60% 40%;
+     width: 60%;
+     background-image: linear-gradient(to right top, var(--orange) 30%, orange 70%);
+     border-radius: .3rem;
+     overflow: hidden;
+}
+
+.payment-content{
+    background-image: linear-gradient(to right top, var(--orange) 30%, orange 70%);
+    padding: 2rem;
+    position: relative;
+}
+
+.payment-content .form-group{
+      margin: 1.5rem 0 1rem 0;
+}
+
+.form-group label{
+    color: var(--darkPurple);
+    font-weight: 700;
+    color: white;
+}
+
+.payment-content .form-group input{
+          padding: .4rem;
+          width: 100%;
+          border: none;
+          border-radius: .2rem;
+          font-weight: 700;
+
+}
+
+.header{
+    font-size: 30px;
+    color: white;
+}
+.payment-content .form-group input:focus{
+    outline: none;
+}
+
+.payment-content .close{
+     display: block;
+     color: var(--main-white);
+     font-size: 2rem;
+     width: 2rem;
+     height: 2rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 2rem;
+     position: absolute;
+     top: 0;
+     right: 0;
+     border-radius: 50%;
+     top: .4rem;
+     right: .4rem;
+     transition: all .4s;
+     background: var(--orange);
+}
+
+.payment-content .close:hover{
+    background: var(--darkPurple);
+    transform: rotate(45deg);
+}
+
+.chkout-btn{
+    width: 100%;
+    padding: .5rem;
+    background: var(--purple);
+    color: var(--main-white);
+    border: none;
+    color: white;
+    border-radius: .2rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    transition: all .3s;
+}
+
+.chkout-btn:hover{
+    background: var(--darkPurple);
+    cursor: pointer;
+}
+
+
+.leftside{
+    position: relative;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.leftside img{
+     width: 100%;
+     height: 100%;
+     transform-origin: 50% 50%;
+     transition: all .5s;
+}
+
+.leftside:hover img{
+    transform: rotate(45deg) scale(1.2, 1.2);
+
+}
+
+.leftside:hover .overlay{
+    opacity: 1;
+}
+
+.content-wrapper .overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .5s;
+}
+

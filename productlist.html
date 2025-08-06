@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Cake Store</title>
+        <link rel="stylesheet" href="css/addtocart.css">
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous">
+
+        </script>
+    </head>
+<body>
+     <div class="header">
+        <p class="logo">PASTRY PERFECTION ==> SHOP HERE
+            <a href="index.html"><span>Back To Homepage</span></a>
+        </p>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+     </div>
+
+      <div class="container">
+           <div id="root"></div>
+           <div class="sidebar">
+               <div class="head"><p>My Cart</p></div>
+               <div id="cartItem">Your Cart is empty</div>
+               <div class="foot">
+                   <h3>Total</h3>
+                   <h2 id="total">$ 0.00</h2>
+               </div>
+                    <label for="checkout_modal" class="checkout-btn" id="checkout-btn">Checkout</label>
+                    <input type="checkbox" name="checkout_modal" id="checkout_modal" onclick="CopyText();" value=" Copy Text " />
+                   
+            </div>
+
+      </div>
+
+
+        <div class="payment" id="pmtForm">
+
+            <div class="contentwrapper">
+
+                <form action="" class="payment-content">
+                    <a href="#" class="close">&times;</a>
+                    <div class="header">Secure payment Info</div>
+                    <div class="form-group">
+                        <label for="name" class="input-label">Name on card</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="e.g Daniel Peters">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card-number" class="input-label">Card Number</label>
+                        <input type="number" name="card-number" id="card-number" class="form-control" placeholder="Card number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expiry-date" class="input-label">Expiry Date</label>
+                        <input type="date" name="expiry-date" id="expiry-date" class="form-control" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination" class="input-label" id="destination" >Total Price</label>
+                        <input type="text" name="destination" id="destination" readonly /> 
+                    </div>
+
+                    <div class="form-group">
+                        <label for="security-code" class="input-label">Security Code</label>
+                        <input type="number" name="security-code" id="security-code" class="form-control" placeholder="4-digit pin">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="chkout-btn">Checkout</button>
+                    </div>
+
+                </form>
+            
+            </div>
+        </div>
+   
+     <script src="js/javascript.js"></script>
+</body>
+
+<!--<div class="footer">
+    <div class="container">Copyright &copy; 2023 Pastry Perfection</div>        
+</div>
+--->
+</html>
